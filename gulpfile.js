@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var jshint = require('gulp-jshint');
+// var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
 

@@ -1,6 +1,199 @@
-// test
+/*
+Theme Name: jTheme
+Theme URI: https://github.com/tidythemes/jtheme
+Author: JC Icaro
+Author URI: https://jc.icaro.com.au/
+Description: JC's Theme;
+Version: 4.0.4
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Text Domain: jtheme
+
+jTheme WordPress Theme © 2017 JC Icaro
+jTheme is distributed under the terms of the GNU GPL
+*/
+
+@import 'normalize';
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400|Open+Sans');
+
+$font: 'Lato', sans-serif;
 
 body {
-    font-size: 0.9em;
-    background: grey;
+	font-size: 1em;
+	font-family: $font;
+	color: #444;
+	width: 100vw;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
 }
+
+a {
+	text-decoration: none;
+	color: #444;
+}
+
+#wrapper {
+
+	position: relative;
+
+	max-width: 1080px;
+	margin: 0 auto;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-column-gap: 1em;
+	grid-row-gap: 1em;
+
+	#header {
+
+		position: fixed;
+		z-index: 1;
+		box-sizing: border-box;
+		padding: 1%;
+		width: 100%;
+		max-width: 1080px;
+		background-color: rgb(233, 235, 237)
+;;
+
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-template-areas: "branding menu";
+
+		#branding {
+
+			grid-area: branding;
+
+			#site-title {
+				h1 {
+					margin-top: 0;
+					margin-bottom: 0.35rem;
+				}
+				a {
+					font-size: 2rem;
+					margin-bottom: 0.35rem;
+				}
+			}
+
+			#site-description {
+
+			}
+		}
+
+		#menu {
+
+			grid-area: menu;
+
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			grid-template-areas: "menu_menu menu_search";
+
+			#search {
+
+				grid-area: menu_search;
+				align-self: center;
+				justify-self: right;
+
+				label {
+					display: none;
+				}
+
+				input {
+					// Remove ios shadow
+				    -webkit-appearance: none;
+				    -moz-appearance: none;
+				    appearance: none;
+
+				    padding: 7px 7px;
+				    box-sizing: border-box;
+				    width: 100%;
+				    
+				    border: 1px solid rgb(204, 204, 204);
+				    
+				    border-radius: 2.5px;
+				    box-shadow: none;
+
+				}
+
+				#searchsubmit {
+					display: none;
+				}
+			}
+
+			.menu {
+				grid-area: menu_menu;
+				align-self: center;
+				justify-self: left;
+
+				ul {
+					li {
+
+						display: inline-block;
+						margin: 2px;
+						padding-left: 1rem;
+						padding-right: 1rem;
+					}
+				}
+			}
+		}
+
+	}
+
+	#content {
+
+		// background-color: #eee;
+
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-column-gap: 10px;
+		grid-row-gap: 10px;
+
+		article.post {
+			box-sizing: border-box;
+			
+			margin: 10px;
+			padding: 10px;
+			
+			.entry-meta {
+				color: #aaa;
+				margin: 10px;
+				margin-top: 20px;
+
+				a {
+					color: rgb(30, 115, 190);
+				}
+			}
+
+			.entry-content {
+				max-height: 300px;
+				overflow: hidden;
+			
+			}
+
+			.entry-footer {
+				color: #aaa;
+				margin: 5px;
+
+				a {
+					color: rgb(30, 115, 190);
+				}
+			}
+		}
+	}
+
+	#sidebar {
+		display: none; // hide for now
+	}
+
+	#footer {
+		display: none; // hide for now
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+find all and replace blankslate
+
+follow: https://code.tutsplus.com/tutorials/using-gulp-for-wordpress-automation--cms-23081
+
+to run: gulp
